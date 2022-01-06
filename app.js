@@ -216,7 +216,7 @@ function setup(shaders) {
     .add(stoprotatelightsbutton, "notrotate")
     .name("Stop rotating lights");
   
-  lightsGui.add(speed, "speed").min(1).max(200).step(1).listen();
+  lightsGui.add(speed, "speed").min(1).max(200).step(1).listen().name("Rotation speed");
 
   const newLight = lightsGui.addFolder("New light");
   newLight.add(newlightinfo, "active");
