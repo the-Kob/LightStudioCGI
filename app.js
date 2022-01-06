@@ -426,19 +426,19 @@ function setup(shaders) {
 
     switch (lights[i].rotationAxis) {
       case X_AXIS:
-        rot = rotateX(deltaTime * SPEED);
+        rot = rotateX(deltaTime * speed.speed);
         lights[i].x = mult(rot, pos)[0];
         lights[i].y = mult(rot, pos)[1];
         lights[i].z = mult(rot, pos)[2];
         break;
       case Y_AXIS:
-        rot = rotateY(deltaTime * SPEED);
+        rot = rotateY(deltaTime * speed.speed);
         lights[i].x = mult(rot, pos)[0];
         lights[i].y = mult(rot, pos)[1];
         lights[i].z = mult(rot, pos)[2];
         break;
       case Z_AXIS:
-        rot = rotateZ(deltaTime * SPEED);
+        rot = rotateZ(deltaTime * speed.speed);
         lights[i].x = mult(rot, pos)[0];
         lights[i].y = mult(rot, pos)[1];
         lights[i].z = mult(rot, pos)[2];
