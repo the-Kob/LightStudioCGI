@@ -40,7 +40,7 @@ let mode;
 
 let rotate = false;
 let deltaTime = 0;
-const SPEED = 100;
+let speed = {speed: 100};
 
 const RGB = 255;
 
@@ -215,6 +215,8 @@ function setup(shaders) {
   lightsGui
     .add(stoprotatelightsbutton, "notrotate")
     .name("Stop rotating lights");
+  
+  lightsGui.add(speed, "speed").min(1).max(200).step(1).listen();
 
   const newLight = lightsGui.addFolder("New light");
   newLight.add(newlightinfo, "active");
