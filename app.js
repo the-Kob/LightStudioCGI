@@ -440,17 +440,6 @@ function setup(shaders)
         }
     }
 
-    function populateStars()
-    {   
-        for(let i = 0; i < MAX_STARS; i ++) {
-            let x = randomFloat(-STAR_SPAWN_RANGE, STAR_SPAWN_RANGE);
-            let y = randomFloat(-STAR_SPAWN_RANGE, STAR_SPAWN_RANGE);
-            let z = randomFloat(-STAR_SPAWN_RANGE, STAR_SPAWN_RANGE);
-        
-            stars.push(vec3(x, y, z));
-        }
-    }
-
     function checkWireframe()
     {
         if(options.wireframe) {
