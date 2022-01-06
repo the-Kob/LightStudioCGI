@@ -1,14 +1,14 @@
-import { buildProgramFromSources, loadShadersFromURLS, setupWebGL } from "../../libs/utils.js";
-import { perspective, lookAt, flatten, vec2, vec3, vec4, normalMatrix, length, subtract, mult, scale, inverse, rotate, rotateX, rotateY, rotateZ } from "../../libs/MV.js";
-import { modelView, loadMatrix, multScale, multTranslation, pushMatrix, popMatrix } from "../../libs/stack.js";
+import { buildProgramFromSources, loadShadersFromURLS, setupWebGL } from "../LightStudioCGI/libs/utils.js";
+import { perspective, lookAt, flatten, vec2, vec3, vec4, normalMatrix, length, subtract, mult, scale, inverse, rotate, rotateX, rotateY, rotateZ } from "../LightStudioCGI/libs/MV.js";
+import { modelView, loadMatrix, multScale, multTranslation, pushMatrix, popMatrix } from "../LightStudioCGI/libs/stack.js";
 
-import * as dat from "../../libs/dat.gui.module.js";
+import * as dat from "../LightStudioCGI/libs/dat.gui.module.js";
 
-import * as CUBE from '../../libs/cube.js';
-import * as CYLINDER from '../../libs/cylinder.js';
-import * as PYRAMID from '../../libs/pyramid.js';
-import * as SPHERE from '../../libs/sphere.js';
-import * as TORUS from '../../libs/torus.js';
+import * as CUBE from '../LightStudioCGI/libs/cube.js';
+import * as CYLINDER from '../LightStudioCGI/libs/cylinder.js';
+import * as PYRAMID from '../LightStudioCGI/libs/pyramid.js';
+import * as SPHERE from '../LightStudioCGI/libs/sphere.js';
+import * as TORUS from '../LightStudioCGI/libs/torus.js';
 
 /** @type WebGLRenderingContext */
 let gl;
