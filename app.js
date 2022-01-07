@@ -320,8 +320,6 @@ function setup(shaders)
     SPHERE.init(gl);
     TORUS.init(gl);
 
-    populateStars();
-
     window.requestAnimationFrame(render);
 
 
