@@ -145,7 +145,7 @@ function setup(shaders)
                 if(lights[i].rotationAxis == -1) {
                     lights[i].rotationAxis = randomInteger(0, 2);
                 } else {
-                    window.alert("The lights are already rotating!");
+                    window.alert("The lights are already rotating!/n The lights can rotate on all three axis (X, Y and Z), so it is possible the light is rotating and you just don't notice it, so try again!");
                     break;
                 }
             }
