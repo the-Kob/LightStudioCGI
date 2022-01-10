@@ -291,27 +291,29 @@ function setup(shaders)
     }
 
     document.onmousemove = function(event) {
-        if(clicking == true) {
-            let originalX = event.offsetX - clickPosX;
-            let originalY = event.offsetY - clickPosY;
-            let vec = scale(0.5, vec2(-originalY , -originalX));
+         if(event.shiftKey == true) {
+             if(clicking == true) {
+                 let originalX = event.offsetX - clickPosX;
+                 let originalY = event.offsetY - clickPosY;
+                 let vec = scale(0.5, vec2(-originalY , -originalX));
 
-            let worldCoord = mult(inverse(mView) , vec4(vec, 0, 0)) ;
+                 let worldCoord = mult(inverse(mView) , vec4(vec, 0, 0)) ;
 
-            let finalVec = rotate(length(vec), worldCoord);
+                 let finalVec = rotate(length(vec), worldCoord);
 
-            let vecAtCamera = vec4(subtract(camera.eye, camera.at), 0);
+                 let vecAtCamera = vec4(subtract(camera.eye, camera.at), 0);
 
-            finalVec = mult(finalVec, vecAtCamera);
+                 finalVec = mult(finalVec, vecAtCamera);
 
-            camera.eye[0] = finalVec[0];
-            camera.eye[1] = finalVec[1];
-            camera.eye[2] = finalVec[2];
-            console.log(camera.eye);
+                 camera.eye[0] = finalVec[0];
+                 camera.eye[1] = finalVec[1];
+                 camera.eye[2] = finalVec[2];
+                 console.log(camera.eye);
 
-            clickPosX = event.offsetX;
-            clickPosY = event.offsetY;
-        }
+                 clickPosX = event.offsetX;
+                 clickPosY = event.offsetY;
+             }
+         }
     };
 
    gl.clearColor(0, 0, 0, 1); 
